@@ -1,0 +1,70 @@
+print("""guide
+1. so
+2. hinh""")
+a=int(input("choose: "))
+if a==1:
+    print("""1. pt bac 2
+2. bat pt bac 1
+3. pt bac 1 3 an""")
+    a=int(input("choose: "))
+    if a==1:
+        print("""1. dinh nghia
+2. cach giai""")
+        if a==1:
+            print("ax2+bx+c=0")
+        elif a==2:
+            print("shift 9 2 2")
+        else:
+            print("error")
+    elif a==2:
+        print("""1. dinh nghia
+2. cach giai""")
+        if a==1:
+            print("ax+b+c>=","ax+b+c=<")
+        elif a==2:
+            print("""b1.lap bang gtri
+b2.ve
+b3.thay 0 vao pt neu dung dkien lay 0 va ngc lai""")
+        else:
+            print("error")
+    elif a==3:
+        print("""1. dinh nghia
+2. cach giai""")
+        if a==1:
+            print("""ax+by+cz=0""")
+        elif a==2:
+            print("shift 9 1 3")
+        else:
+            print("error")
+    else:
+        print("error")
+elif a==2:
+    print("""1.dinh ly sin cos
+2.vector""")
+    a=int(input("choose: "))
+    if a==1:
+        print("""1.dinh ly sin
+2. dinh ly cosin""")
+        a=int(input("choose: "))
+        if a==1:
+            print("(a/sinA)=(b/sinB)=(c/sinC)=2R")
+        elif a==2:
+            print("""b=can(a*2+b*2-2*a*b*cosC
+c=can(b*2+a*2-2*a*b*cosA
+a=b*2+c*2-2*b*c*cosB""")
+        else:
+            print("error")
+    elif a==2:
+        print("""1.tong
+2. tru
+3. tich vo huong""")
+        a=int(input("choose: "))
+        if a==1:
+            print("AB+BC=AC")
+        elif a==2:
+            print("AB-CB=AB+BC=AC")
+        elif a==3:
+            print("AB.BC=|AB|.|BC|.cos(AB,BC)")
+        else:
+            print("error")
+    
