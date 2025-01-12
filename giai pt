@@ -1,0 +1,60 @@
+print("""choose
+1. ax²+bx+c=0(example:3x²+2x+5=0)
+2. ax+b=0 (example:2x+3=0 or 2x+3=4)
+3. ʃax+by+c=0
+   ʅax+by+c=0""")
+a=int(input("choose 1 or 2: "))
+if a == int(1) :
+    print("put a b c")
+    a=float(input("a=: "))
+    b=float(input("b=: "))
+    c=float(input("c=: "))
+    delta=b**2-4*a*c
+    print("""choose
+1. Δ
+2. Δ'""")
+    a=int(input("delta 1 or 2: "))
+    if a == int(1):
+        print("""choose
+1. check delta
+2. solve x1 or x2
+3. all task""")
+        a=int(input("answer: "))
+        if a == int(1):
+            if delta>0:
+                print("Δ=",delta,"> 0")
+            elif delta==0:
+                print("Δ=",delta,"= 0")
+            else:
+                print("Δ=",delta,"< 0")
+                #continue wait code
+    elif a == int(2):
+        print("""choose
+1. check delta
+2. solve x1 or x2
+3. all task""")
+        a=int(input("answer: "))
+        if a== int(1):
+            print("Δ'=",(delta)/4,"> 0")
+        elif delta==0:
+            print("Δ'=",(delta)/4,"= 0")
+        else:
+            print("Δ'=",(delta)/4,"< 0")
+            #continue wait code
+elif a == int(2) :
+    print("""choose
+1. ax+b=0
+2. ax+b=c (warning:c≠0)""")
+    a=int(input("choose 1 or 2: "))
+    if a == int(1) :
+        print("put a b")
+        a=float(input("a=: "))
+        b=float(input("b=: "))
+        print("x=",float((-b/a)))
+    elif a == int(2) :
+        print("put a b c")
+        a=float(input("a=: "))
+        b=float(input("b=: "))
+        c=float(input("c=: "))
+        print("x=",float((c-(b))/a))
+#continue wait code
