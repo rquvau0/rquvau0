@@ -27,20 +27,47 @@ if a == int(1) :
                 print("Δ=",delta,"= 0")
             else:
                 print("Δ=",delta,"< 0")
-                #continue wait code
+        elif a == int(2):
+            print("""choose
+1. x1
+2. x2
+3. all task""")
+            a=int(input("answer: "))
+            if a== int(1):
+                print("x1=",(-b + delta**(1/2))/(2*a))
+            elif a==int(2):
+                print("x2=",(-b - delta**(1/2))/(2*a))
+            else:
+                print("x1=",(-b + delta**(1/2))/(2*a),"x2=",(-b - delta**(1/2))/(2*a))
     elif a == int(2):
-        print("""choose
+        if b%2 ==0:
+            print("""choose
 1. check delta
 2. solve x1 or x2
 3. all task""")
-        a=int(input("answer: "))
-        if a== int(1):
-            print("Δ'=",(delta)/4,"> 0")
-        elif delta==0:
-            print("Δ'=",(delta)/4,"= 0")
+            a=int(input("answer: "))
+            if a== int(1):
+                if delta>0:
+                    print("Δ'=",(delta)/4,"> 0")
+                elif delta==0:
+                    print("Δ'=",(delta)/4,"= 0")
+                else:
+                    print("Δ'=",(delta)/4,"< 0")
+            elif a == int(2):
+                delta=delta/4
+                print("""choose
+1. x1
+2. x2
+3. all task""")
+                a=int(input("answer: "))
+                if a== int(1):
+                    print("x1=",(-b + delta**(1/2))/(a))
+                elif a==int(2):
+                    print("x2=",(-b - delta**(1/2))/(a))
+                else:
+                    print("x1=",(-b + delta**(1/2))/(a),"x2=",(-b - delta**(1/2))/(a))
         else:
-            print("Δ'=",(delta)/4,"< 0")
-            #continue wait code
+            print("b can't ≑ 2")
 elif a == int(2) :
     print("""choose
 1. ax+b=0
