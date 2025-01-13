@@ -1,9 +1,9 @@
 print("""choose
 1. ax²+bx+c=0(example:3x²+2x+5=0)
 2. ax+b=0 (example:2x+3=0 or 2x+3=4)
-3. ʃax+by+c=0
-   ʅax+by+c=0""")
-a=int(input("choose 1 or 2: "))
+3. ʃa1x+b1y+c1=0    (example:ʃ2x+3y+5=0
+   ʅa2x+b2y+c2=0             ʅ3x+y-7=0""")
+a=int(input("choose 1 or 2,3: "))
 if a == int(1) :
     print("put a b c")
     a=float(input("a=: "))
@@ -25,8 +25,10 @@ if a == int(1) :
                 print("Δ=",delta,"> 0")
             elif delta==0:
                 print("Δ=",delta,"= 0")
-            else:
+            elif delta<0:
                 print("Δ=",delta,"< 0")
+            else:
+                print("choose again")
         elif a == int(2):
             print("""choose
 1. x1
@@ -37,8 +39,10 @@ if a == int(1) :
                 print("x1=",(-b + delta**(1/2))/(2*a))
             elif a==int(2):
                 print("x2=",(-b - delta**(1/2))/(2*a))
-            else:
+            elif a==int(3):
                 print("x1=",(-b + delta**(1/2))/(2*a),"x2=",(-b - delta**(1/2))/(2*a))
+            else:
+                print("choose again")
     elif a == int(2):
         if b%2 ==0:
             print("""choose
@@ -51,8 +55,10 @@ if a == int(1) :
                     print("Δ'=",(delta)/4,"> 0")
                 elif delta==0:
                     print("Δ'=",(delta)/4,"= 0")
-                else:
+                elif delta<0:
                     print("Δ'=",(delta)/4,"< 0")
+                else:
+                    print("choose again")
             elif a == int(2):
                 delta=delta/4
                 print("""choose
@@ -64,10 +70,14 @@ if a == int(1) :
                     print("x1=",(-b + delta**(1/2))/(a))
                 elif a==int(2):
                     print("x2=",(-b - delta**(1/2))/(a))
-                else:
+                elif a==int(3):
                     print("x1=",(-b + delta**(1/2))/(a),"x2=",(-b - delta**(1/2))/(a))
+                else:
+                    print("choose again")
         else:
             print("b can't ≑ 2")
+    else:
+        print("choose again")
 elif a == int(2) :
     print("""choose
 1. ax+b=0
@@ -84,4 +94,27 @@ elif a == int(2) :
         b=float(input("b=: "))
         c=float(input("c=: "))
         print("x=",float((c-(b))/a))
-#continue wait code
+    else:
+        print("choose again")
+elif a==int(3):
+    print("""choose
+1. ʃx=c  or y=c
+   ʅax+by+c=0
+2. ʃa1+b1y+c1=0
+   ʅa2x+b2y+c2=0""")
+    a=int(input("choose: "))
+    if a==int(1):
+        print("put x or y and a b c (warning: if x or y dont have put'0')")
+        x=float(input("x=: "))
+        y=float(input("y=: "))
+        a=float(input("a=: "))
+        b=float(input("b=: "))
+        c=float(input("c=: "))
+        if y==float(0):
+            print("x=",x,"y=",(-c-a*x)/b)
+        elif x==float(0):
+            print("x=",(-c-b*y)/a,"y=",y)
+        else:
+            print("choose again")
+    elif a==int(2):
+        print("wait code XD")
